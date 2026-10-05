@@ -1,0 +1,13 @@
+{
+  "name": "oxlint-no-cycle-override-repro",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "repro": "echo '--- top-level rules (correctly detects the cycle) ---' && oxlint -c oxlint-top-level.config.ts a.ts b.ts; echo; echo '--- overrides[].rules (silently finds nothing) ---' && oxlint -c oxlint-override.config.ts a.ts b.ts"
+  },
+  "dependencies": {
+    "oxlint": "1.60.0"
+  }
+}
